@@ -1,0 +1,225 @@
+.gallery-box {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+        margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-mobile-m) {
+        width: 100%;
+    }
+}
+
+.gallery {  
+        
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    @media only screen and (max-width: $bp-mobile-m) {
+        flex-direction: column;
+    }
+
+    &__main img {
+        width: 100%;
+    } 
+
+    &__main {
+        background-clip: padding-box;
+        border: 3px solid $color-pink-light-2;
+        box-shadow: 0 2rem 6rem rgba(0,0,0,.7);
+        padding: 2rem;
+
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        margin-top: 3rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 0;
+            grid-template-columns: repeat(3, .5fr);
+            margin-left: 2rem;
+            align-self: center;
+        }
+
+        @media only screen and (max-width: $bp-mobile-m) {
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+    } 
+
+    &__images img {
+        width: 100%;
+            &:hover,
+            &:active {
+            cursor: pointer;
+        }
+    }
+}
+
+.user-reviews {
+    margin-top: -3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        width: 95%;
+        align-self: center;
+    }
+}
+
+.review {
+    width: 70%;
+    height: 19rem;
+    padding: 2rem;
+    padding-left: 6rem;
+    padding-right: 3rem;
+    background-color: $color-white-3;
+    border: 1px solid $color-pink-light-3;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+    position: relative;
+    transition: animation 1s;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 45%;
+
+        &:first-child {
+            margin-right: 2rem;
+        }    
+    }
+
+    @media only screen and (max-width: $bp-medium-extra) {
+        height: 25rem;   
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        width: 80%;
+        height: 15rem;
+
+        &:first-child {
+            margin-right: 0;
+        } 
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+        width: 90%;
+    }
+
+    @media only screen and (max-width: $bp-mobile-m) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        height: 15rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile-s) {
+        height: 20rem;
+    }
+
+    
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -1.75rem;
+        left: 0.25rem;
+        line-height: 1;
+        font-size: 18rem;
+        color: $color-grey-dark-2;
+        font-family: sans-serif;
+        z-index: 100;
+
+        @media only screen and (max-width: $bp-mobile-m) {
+            font-size: 6rem;
+            top: 1rem;
+            left: 1.3rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        text-align: justify;
+        font-family: 'Open Sans', sans-serif;
+        color: $color-grey-dark-2;
+        line-height: 1.8rem;
+
+        @media only screen and (max-width: $bp-mobile-m) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile-s) {
+            font-size: .9rem;
+            line-height: 1.4rem;
+            text-align: right;
+        }
+    }
+
+    &__photo {
+        width: 7.5rem;
+        height: 100%;
+        border-radius: 50% 50%;
+        background-position: center;
+        background-size: cover;
+        border: 1px solid $color-pink-light-3;
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            width: 6rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile-m) {
+            width: 4.5rem;
+            margin-left: -4rem;
+        }
+    }
+
+    &__user-name p {
+        font-size: 1.2rem;
+        font-family: 'Open Sans', sans-serif;
+        color: $color-grey-dark-2;
+        text-align: left;
+        margin-left: -4rem;
+
+        @media only screen and (max-width: $bp-mobile-m) {
+            font-size: .9rem;
+            line-height: 1.3rem;
+        }
+    }
+}

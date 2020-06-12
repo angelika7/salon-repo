@@ -1,0 +1,97 @@
+.wrap {
+    display: table;
+
+    @media only screen and (max-width: $bp-medium-extra) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.img-about {
+    display: table-cell;
+    width: 50%;
+    padding-right: 3rem;
+    vertical-align: middle;
+
+    @media only screen and (max-width: $bp-medium-extra) {
+        display: flex;
+        flex-direction: row;
+        height: 25rem;
+        width: auto;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    @media only screen and (max-width: $bp-mobile-m) {
+        height: 13rem;
+    }
+
+    &__photo {
+        width: 87%;
+        margin-left: 6rem;
+        padding: 3rem;
+        background-clip: padding-box;
+        border: 3px solid $color-pink-light-2;
+        box-shadow: 0 2rem 6rem rgba(0,0,0,.7);
+
+        @media only screen and (max-width: $bp-medium-extra) {
+            object-fit: cover;
+            margin-left: 0;
+            padding: 2rem;
+        }
+    }
+}
+
+.about {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 3rem 0;
+    background-image: linear-gradient(
+        to right, 
+        rgba($color-pink-light-1, 0.3), 
+        rgba($color-white-2, 0.3));
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 4.5rem 0;
+    }
+
+    @media only screen and (max-width: $bp-medium-extra) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 5rem;
+        padding: 2rem;
+    }
+    
+
+    &__paragraph {
+        margin-left: 4rem;
+        margin-right: 6rem;
+        text-align: justify;
+        line-height: 3rem;
+        font-size: 1.6rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            margin-right: 2.5rem;
+            margin-left: 2.5rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile-m) {
+            font-size: 1.1rem;
+            line-height: 1.9rem;
+        }
+    }
+
+    &::first-letter {
+        font-size: 500%;
+        font-weight: 100;
+    }
+
+    &__brand {
+        color: $color-pink-light-2;
+        font-size: 1.8rem;
+    }
+}

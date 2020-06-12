@@ -1,0 +1,35 @@
+.heading-secondary {
+    font-size: 3rem;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    background-image: linear-gradient(to right, $color-pink-light-2, $color-pink-light-3);  
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.5rem;
+    line-height: 3.5rem;
+
+    @media only screen and (max-width: $bp-mobile-s) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    &--blue {
+        background-image: linear-gradient(to right, $color-blue-light-2, $color-blue-light-3); 
+    }
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    font-family: inherit;
+    line-height: 2.5rem;
+    letter-spacing: 0.5rem;
+    color: var(--color-grey-dark-2);
+
+}
+
+p {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-grey-dark-2);
+}

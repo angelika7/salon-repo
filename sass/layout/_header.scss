@@ -1,0 +1,120 @@
+.header {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+        rgba($color-grey-dark-2, 0.9),
+        rgba($color-black, 0.8)),
+        url(../img/bg_header.jpg);
+    background-size: cover;
+    background-position: top;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.7);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: $bp-mobile-m) {
+        justify-content: center;
+    }
+
+    &__logo-box {
+        position: absolute;
+        height: 6rem;
+        width: 6rem;
+        top: 2rem;
+        left: 2rem;
+
+        @media only screen and (max-width: $bp-mobile) {
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__slogan {
+
+        font-family: 'Srisakdi', cursive;
+        font-size: 12rem;
+        font-weight: 100;
+        color: $color-white;
+        border-left: 1px solid var(--color-white);
+        border-right: 1px solid var(--color-white);
+        border-radius: 15%;
+        letter-spacing: 1.2rem;
+        line-height: 14rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 10rem;
+            line-height: 12rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 8rem;
+            line-height: 9rem;
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+            letter-spacing: 1rem;
+            border-radius: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: $bp-mobile-m) {
+            border-radius: 0;
+            border: none;
+        }
+
+        &--sub {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 2rem;
+            color: $color-white;
+            letter-spacing: 1.2rem;
+            margin-top: 2rem;
+            display: flex;
+            align-self: center;
+
+            @media only screen and (max-width: $bp-small) {
+                font-size: 1.4rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile) {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                letter-spacing: .9rem;
+            }
+
+            @media only screen and (max-width: $bp-mobile-m) {
+                font-size: .9rem;
+                line-height: 1.2rem;
+                letter-spacing: .5rem;
+            }
+        }
+    }
+}
+
+.slogan-box {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding-right: 5rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+        padding-right: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-mobile-m) {
+        padding: 0;
+    }
+}

@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;  /* w projekcie 1rem = 10px --> 10/16 = 62.5%; */
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+// Break points
+$bp-largest: 125em;     // min. 2000px
+$bp-large: 64em;    // 1024px
+$bp-medium: 62.5em;   // 1000px
+$bp-medium-extra: 58.75em;   // 940px
+$bp-small: 53.75em;     // 860px
+$bp-small-extra: 48em; // 768px
+$bp-smallest: 41.875em; // 670px
+$bp-mobile: 37.5em; // 600px
+$bp-mobile-m: 26.25em; // 420px
+$bp-mobile-s: 20em; // 320px
+
+/* @media only screen and (max-width: $bp-large) {
+    padding: 4rem 4rem;
+}
+*/

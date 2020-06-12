@@ -1,0 +1,127 @@
+// Animation fade in
+
+.animationFadeIn {
+    animation-name: fadeIn; 
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+}
+
+// Animation fade out from bottom
+
+.animationFadeOutBottom {
+    animation: fromBottom 1.4s ease-out;
+    transition: animation 1.4s;
+
+    @keyframes fromBottom {
+        from {
+            transform: translateY(10rem);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+// Animation from left
+
+.animationFromLeft {
+    animation-name: fromLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+
+    @keyframes fromLeft {
+        0% {
+            transform: translateX(-10rem);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+// Animation from right
+
+.animationFromRight {
+    animation-name: fromRight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    transition: animation 2s;
+
+    @keyframes fromRight {
+        0% {
+            transform: translateX(10rem);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+// Animation bounce
+
+.animationgoBounce {
+    animation: Bounce .7s linear alternate;
+    transition: animation 1s;
+
+    @keyframes Bounce {
+        0% {
+            transform: scale(1);
+        }
+
+        25% {
+            transform: scale(.8);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+
+        75% {
+            transform: scale(1.1);
+        }
+    
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+// Animation slide in up
+
+.animationSlideInUp {
+    animation: slideInUp 1s ease-in-out;
+
+    @keyframes slideInUp {
+        from {
+          transform: translateX(10rem);
+          opacity: 0;
+        }
+      
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+    }
+}
+

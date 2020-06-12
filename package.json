@@ -1,0 +1,20 @@
+{
+  "name": "salon",
+  "version": "1.0.0",
+  "description": "Strona internetowa salonu fryzjerskiego",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "prefix:css": "postcss ./css/style.css -o ./css/style.prefix.css"
+  },
+  "author": "Angelika Chochorowska",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "node-sass": "^4.9.3",
+    "postcss-cli": "^4.1.1"
+  },
+  "dependencies": {
+    "node": "^10.0.0"
+  }
+}
